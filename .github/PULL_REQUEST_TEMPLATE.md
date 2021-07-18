@@ -1,4 +1,4 @@
-<!--- Provide a general summary of your changes in the Title above -->
+<!--- The title above should be Team ID | Project Name -->
 
 ## What Are You Building
 <!--- Describe your project here, go on and write an essay and we will read it -->
