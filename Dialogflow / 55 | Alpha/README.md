@@ -10,7 +10,7 @@
   <h3 align="center">Alpha Bot</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Simple virtual friend lives in your cli (now in discord bot too)!
     <br />
     <a href="https://github.com/rijfas/saturday-hack-night-dialogflow"><strong>Explore the docs »</strong></a>
     <br />
