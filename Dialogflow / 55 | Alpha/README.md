@@ -81,9 +81,9 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Python](https://getbootstrap.com)
-* [Flask](https://jquery.com)
-* [Replit](https://laravel.com)
+* [Python](https://www.python.org/)
+* [Flask](https://flask.palletsprojects.com/)
+* [Replit](https://replit.com/)
 * [DialogFlow](https://dialogflow.cloud.google.com/#/getStarted)
 * [UptimeRobot](https://uptimerobot.com/)
 
