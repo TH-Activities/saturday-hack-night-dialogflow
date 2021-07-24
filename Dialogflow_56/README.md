@@ -36,4 +36,4 @@ This bot is still under development and also have many bugs.
 
 ## Participants
 - [Aflah V K](https://github.com/AFLAH2527)
-- [Adil Ayyob](https://github.com/Adilayyoob)
+- [Adil Ayyoob](https://github.com/Adilayyoob)
