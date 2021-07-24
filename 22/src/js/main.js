@@ -22,7 +22,11 @@ user_form.onsubmit = async (e) => {
     .then((data) => {
       mood = data;
     })
-    .then(() => (img_link = apiReq(mood, user_input.value)))
-    .then(console.log(img_link));
+    .then(() => {
+      img_link = apiReq(mood, user_input.value);
+      return img_link;
+
+    })
+  // .then((data) => { console.log(img_link); return img_link; });
   // Meme response
 };
