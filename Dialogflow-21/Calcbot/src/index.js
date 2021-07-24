@@ -42,5 +42,5 @@ client.on('message', async message => {
 
 //Login 
 client.login(process.env.BOT_TOKEN).then(() => {
-  console.log(`Discowin: Logged in`)
+  console.log(`CalcBot: Logged in`)
 })
