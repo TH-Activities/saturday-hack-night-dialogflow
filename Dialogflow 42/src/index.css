@@ -17,13 +17,15 @@ body{
     align-items: center;
     width:100% ;
     height: 100%;
+    top:0;
 
 }
     
 .chatBox{
    margin-left: auto;
    margin-right: auto;
-   
+   border-radius: 1rem;
+   border:0;
 }
 .context h1{
     text-align: center;
