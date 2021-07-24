@@ -1,21 +1,42 @@
 <template>
   <div id="app">
+    <AnimatedLoading :showAnimatedLoading="showAnimatedLoading" />
     <h1>mood-o-(meme)ter</h1>
     <div class="description">
       <p>your current mood based on memes</p>
     </div>
-    <StringInput />
+    <transition name="fade">
+      <button
+        class="cta"
+        v-if="showInputForm === false"
+        @click="showInputForm = true"
+      >
+        Get started!
+      </button>
+      <StringInput :showInput="showInputForm" />
+    </transition>
   </div>
 </template>
 
 <script>
 import StringInput from "@/components/StringInput.vue";
+import AnimatedLoading from "@/components/AnimatedLoading.vue";
 
 export default {
   name: "App",
   components: {
     StringInput: StringInput,
+    AnimatedLoading: AnimatedLoading
   },
+  data() {
+    return {
+      showInputForm: false,
+      showAnimatedLoading: true
+    };
+  },
+  mounted() {
+    this.showAnimatedLoading = false;
+  }
 };
 </script>
 
@@ -27,7 +48,7 @@ export default {
   --baby-blue-eyes: #9ac4f8ff;
   --magic-mint: #99edccff;
   --rosy-brown: #cb958eff;
-  --blush: #e36588ff;
+  --blush: #e36588;
   --jazzberry-jam: #9a275aff;
 }
 
@@ -66,6 +87,10 @@ button {
   transition: 200ms;
 }
 
+.cta {
+  margin: 0 auto;
+}
+
 button:hover {
   box-shadow: none;
   transition: 200ms;
@@ -75,5 +100,15 @@ button:hover {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0px;
+}
+
+/* vue animations */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

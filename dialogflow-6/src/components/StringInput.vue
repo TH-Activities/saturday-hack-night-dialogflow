@@ -1,5 +1,9 @@
 <template>
-  <form @submit.prevent="getSentiment()" class="sentiment-input-form">
+  <form
+    @submit.prevent="getSentiment()"
+    class="sentiment-input-form"
+    v-if="showInput === true"
+  >
     <label for="sentiment-text">so tell me, how do you feel right now?</label>
     <textarea
       id="sentiment-text"
@@ -8,7 +12,9 @@
       cols="50"
       maxlength="500"
       placeholder="Type here..."
+      required
     ></textarea>
+    <!-- <input type="submit" class="sentiment-input-submit" value="Submit" /> -->
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </template>
@@ -26,6 +32,26 @@ export default {
   computed: {
     cleanedSentimentText: function () {
       return DOMPurify.sanitize(this.sentimentText);
+    },
+  },
+  props: {
+    showInput: {
+      default: false,
+      type: Boolean,
+    },
+  },
+  methods: {
+    getSentiment() {
+      (async () => {
+        // fetch backend API to get sentiment analysis
+        let sentiment = await fetch(
+          "/api/getSentimentValue?query=" +
+            encodeURIComponent(this.cleanedSentimentText)
+        );
+        let response = await sentiment.json();
+
+        console.log(response);
+      })();
     },
   },
 };
