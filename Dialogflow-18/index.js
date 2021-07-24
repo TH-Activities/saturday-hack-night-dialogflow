@@ -16,10 +16,10 @@ app.get('/', function(req, res) {
 
 app.post("/", async function(req, res) {
     query = req.body.query;
-    console.log(query)
+
 
     reply = await df(query);
-    console.log(reply);
+
     res.redirect("/");
 })
 let port = process.env.PORT || 5000;
