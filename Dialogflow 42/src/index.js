@@ -6,8 +6,8 @@
 var messages = [], //array that hold the record of each string in chat
   lastUserMessage = "", //keeps track of the most recent input string from the user
   botMessage = "", //var keeps track of what the chatbot is going to say
-  botName = 'Chatbot', //name of the chatbot
-  talking = true; //when false the speach function doesn't work
+  botName = 'Joker', //name of the chatbot
+  talking = true; //when false the speech function doesn't work
 //
 //
 //****************************************************************
@@ -18,18 +18,20 @@ var messages = [], //array that hold the record of each string in chat
 //****************************************************************
 //****************************************************************
 //edit this function to change what the chatbot says
+function getJoke(){
+    
+}
+
 function chatbotResponse() {
   talking = true;
   botMessage = "I'm confused"; //the default message
 
-  if (lastUserMessage === 'hi' || lastUserMessage =='hello') {
-    const hi = ['hi','howdy','hello']
-    botMessage = hi[Math.floor(Math.random()*(hi.length))];;
-  }
+  fetch('http://api.icndb.com/jokes/random').then(res=>res.json()).then(data =>
+    {
+        botMessage=data.value.joke ; messages.push("<b>" + botName + ":</b> " + botMessage);Speech(botMessage);
 
-  if (lastUserMessage === 'name') {
-    botMessage = 'My name is ' + botName;
-  }
+    })
+  ;
 }
 //****************************************************************
 //****************************************************************
@@ -56,9 +58,9 @@ function newEntry() {
     //sets the variable botMessage in response to lastUserMessage
     chatbotResponse();
     //add the chatbot's name and message to the array messages
-    messages.push("<b>" + botName + ":</b> " + botMessage);
+    
     // says the message using the text to speech function written below
-    Speech(botMessage);
+    
     //outputs the last few array elements of messages to html
     for (var i = 1; i < 8; i++) {
       if (messages[messages.length - i])
