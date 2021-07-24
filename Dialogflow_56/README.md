@@ -20,6 +20,13 @@ This bot is still under development and also have many bugs.
 - Add this bot to your server via the link given below
 - NB : If you want to interact with the bot add a '$' symbol before the command
 
+##  Example Commands: 
+- $greeting(can be hi,hello etc)
+- $food_time(like breakfast,lunch, dinner etc)
+- $<just ask menu>(like send me menu)
+- $<order_fooditem>(According to the food time you take Eg : type $meals for lunch)
+  
+---
 
 <img alt="Example Screenshot" src="images/ss.png">
 
