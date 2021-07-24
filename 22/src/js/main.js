@@ -1,3 +1,5 @@
+import { apiReq } from "./api.js";
+
 let user_form = document.querySelector("form");
 let user_input = document.querySelector("#search");
 
@@ -9,4 +11,6 @@ user_form.onsubmit = async (e) => {
   e.preventDefault();
 
   // Put API fetch requests here onwards
+  let response = apiReq("happy");
+  console.log(response);
 };
