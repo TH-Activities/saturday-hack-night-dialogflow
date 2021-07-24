@@ -4,7 +4,7 @@ require('dotenv').config();
 const projectId = process.env.projectId;
 console.log(projectId)
 const sessionId = '123456';
-const queries = ['age']
+const queries = ['whats your age']
 
 const languageCode = 'en';
 
@@ -62,9 +62,7 @@ async function executeQueries(projectId, sessionId, queries, languageCode) {
                 languageCode
             );
             console.log('Detected intent');
-            console.log(
-                `Fulfillment Text: ${intentResponse.queryResult.fulfillmentText}`
-            );
+            console.log(intentResponse.queryResult.fulfillmentText);
             // Use the context from this response for next queries
             context = intentResponse.queryResult.outputContexts;
         } catch (error) {
@@ -72,4 +70,7 @@ async function executeQueries(projectId, sessionId, queries, languageCode) {
         }
     }
 }
+
+
+
 executeQueries(projectId, sessionId, queries, languageCode);
