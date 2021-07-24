@@ -4,7 +4,9 @@
 // we've started you off with Express (https://expressjs.com/)
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require("express");
+const cors = require('cors');
 const app = express();
+app.use(cors());
 const { executeQueries, detectIntent } = require('./df');
 
 // our default array of dreams
@@ -31,7 +33,7 @@ app.get("/meme/:q", (request, response) => {
     console.log(resp);
     response.json(resp);
   });
-  
+
 });
 
 // listen for requests :)
