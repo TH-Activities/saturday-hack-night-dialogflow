@@ -1,17 +1,22 @@
 const express = require("express");
 const df = require("./dialogflow.js");
+const bodyParser = require('body-parser')
 
 
 
 const app = express();
-app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs")
+
+let reply = "";
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', { reply: reply });
+    reply = "";
 })
 
 app.post("/", async function(req, res) {
     query = req.body.query;
+    console.log(query)
 
     reply = await df(query);
     console.log(reply);
