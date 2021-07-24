@@ -21,9 +21,9 @@ This bot is still under development and also have many bugs.
 - NB : If you want to interact with the bot add a '$' symbol before the command
 
 ##  Example Commands: 
-- $greeting(can be hi,hello etc)
-- $food_time(like breakfast,lunch, dinner etc)
-- $<just ask menu>(like send me menu)
+- $ <greeting>(can be hi,hello etc)
+- $ <food_time>(like breakfast,lunch, dinner etc)
+- $ <just ask menu> (like send me menu)
 - $<order_fooditem>(According to the food time you take Eg : type $meals for lunch)
   
 ---
