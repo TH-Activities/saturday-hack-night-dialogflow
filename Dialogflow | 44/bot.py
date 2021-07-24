@@ -75,7 +75,7 @@ def fetch_reddit(words):
                     bot.sendPhoto(chat_id=816449476, photo=submission.url, caption=message)
                     # bot.sendMessage(chat_id=channel, parse_mode=telegram.ParseMode.HTML, text=message)
                     write_submissions(submission.id)
-                    sleep(10)
+                    sleep(100)
                 except Exception as e:
                     log.exception("Error parsing {}".format(link))
         except Exception as e:
