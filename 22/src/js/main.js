@@ -11,6 +11,6 @@ user_form.onsubmit = async (e) => {
   e.preventDefault();
 
   // Put API fetch requests here onwards
-  let response = apiReq("happy");
+  let response = apiReq("happy", user_input.value);
   console.log(response);
 };
