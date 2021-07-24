@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dialogflow-45",
+  "private_key_id": "7c4bc70b31598fa6a17217895564fa44635b70d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDXJcrL4KNKIWME\nKeWw8mixgrxDOKmsphCzDk+scdODoWx71tZ56MHvSO1a6zORhbehzyEjrJSWgER2\nMk1mWsY4TYyNVUlfoarEzRY7T/pQIU4TkfZa8iqGJLT4TYamgdFmGQmI3HfVwdPZ\nTl8X+4T0PhpZvxJdhjJkDCferGo49c8a4wsqZrKNORiJxgKkIb4OURkdyKG7JQ33\nDNqzsLvW33bppXn6kzhwvr5A4g5jZ/GpG//mMNXMSRbhSyUy1KFjXPmn/839l8OW\nGaHzp8/TEh6ozxQIpHgU80w/lEC6suZ9ZZ+h5slAtxR7pzhu04jNzNb3o7Ta16Cr\nf1wz/Rp3AgMBAAECggEAEjrsZKXLtZ/U7942+Bffls77nHyO0Ad1mckoJ3YGVKcs\ndeUzNjrql+0ng5Ezb5do2HKgcxE6uUf0GnR9CiO98Q5ieaVU5XVhmXHBT6mhYwHM\nx6wSDQxrswMlkcv2kWGloyToTGsAp8xX4u1uRwNzysL/tkQSTnoXsfzfsfwNDMy2\nEQMezycpFMPniTL07FL9IbY5C4bYUD5A//ougi1kIOQbRBoBPjmxrk9edNSKf++8\nVFyzumeDQPJy6QLCozN33QFYdyKr08y9P2n0qyWwVCEG5IL2zkgpVWdUnxs0SSsf\njbvCfLHuWpXdPAG0u1J+i9MuAAgLQH1kqsuLi2afpQKBgQD+jjswSoU1icl2cCDN\nxVCXn+olFrxUSGRYdVXBThzcdyJEJDquyOeyApy8XEIWRdPMph764Xa4aLCR1KUl\nThYXNPuvFoUqLZyDLq+Bt8dQML4c6mFG01dB4yRqiBeiFx2DL/bBw9xQFoBZryOI\nBCKcj92LZeVmLsIuxF3PRtH+ZQKBgQDYXlEWhdV56ayzmwxBzcWUww5Km1szumlu\nS3xcasS7YUutjl6B8jdtUivGpUayccLwYlwYqOaCY09R3XcQKS6qvI7BNvib//Xq\nzBZSAGg1uqcIFqe8BFpQaDDP2yFHIc0mmHoRAm7MtGdAGERQXdGfEFTkU6MgR2Mr\ncDL333IpqwKBgQCACoEBMGrC3FTm603E0zxPmFOJZl9Cscsvp42EF0tzJcWpquON\nqWbJ5oB6Spm/ZE4+AU1R+njiF17Ba8nJ8vYvpCn5DwXaimjQn3oOcKej0XC/ULGv\nk3yvmpZls6DXmnLw2v5uxpsZ+ceD1RG1SAc04zSX+qAh/uET7xgUu9XC9QKBgASt\nnWE4SZJWPBayDoTJtzDtOrzgOQuYRzlMRocVA+XtR56cCm0S2KHzeeDUp/+puAZM\niiM6W6mMDiX9/NoLmee1Jf0FfECbOyz1drIVMiufOodRPhUxnuZIKm4EFecc0vu3\npkQB4nVonSbkn22BacvfpYY+TLOg94Lz7RYw7Z37AoGBAPRQTLUFtiF+0qWjRILu\nISl5QFvGX2eQbEjrzKqkWXlF2U7hzUT7zdl/IW6hx7ibJUE1utanoLyq0YDA5En+\nUM+sheTl8d5ZbgnsuS4P9eoq9evcgjs4iihOqFUzZ4GxHC73UqgMjZSqOnQu2tYV\nXRHAg68gD6O/pN17r8JDApzw\n-----END PRIVATE KEY-----\n",
+  "client_email": "saturday-hack-night-dialogflow@dialogflow-45.iam.gserviceaccount.com",
+  "client_id": "113087621268815953983",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/saturday-hack-night-dialogflow%40dialogflow-45.iam.gserviceaccount.com"
+}
