@@ -30,7 +30,11 @@
       <p class="score">
         Score: {{ sentiment.sentimentOutput.queryTextSentiment.score }}
       </p>
-      <p class="finalEmotion">It looks like you're {{ sentiment.finalEmotion }}</p>
+      <p class="finalEmotion">
+        It looks like you're {{ sentiment.finalEmotion }}
+      </p>
+
+      <img :src="memeSrc" alt="A meme for your mood." class="meme" />
     </div>
     <TextLoading :showLoadingOverlay="showTextLoading" />
   </div>
@@ -135,5 +139,14 @@ textarea {
 .magnitude,
 .score {
   margin: 0px;
+}
+
+.finalEmotion {
+  font-size: 24px;
+  font-weight: 500;
+  background-color: var(--magic-mint);
+  border-radius: 3px;
+  padding: 20px 20px;
+  width: 100%;
 }
 </style>
