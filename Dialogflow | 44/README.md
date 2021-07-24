@@ -1,0 +1,1 @@
+![Alt text](output5.gif) / ![](output5.gif)
