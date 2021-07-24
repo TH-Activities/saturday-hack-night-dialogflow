@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=C:\Padikkan_Flutter\flutter"
-export "FLUTTER_APPLICATION_PATH=F:\Diagflow\saturday-hack-night-dialogflow\diagflow_45"
+export "FLUTTER_APPLICATION_PATH=F:\Diagflow\test"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_TARGET=lib\main.dart"
 export "FLUTTER_BUILD_DIR=build"

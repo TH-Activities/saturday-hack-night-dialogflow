@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.diagflow_45">
+    package="com.example.test">
    <application
-        android:label="diagflow_45"
+        android:label="test"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

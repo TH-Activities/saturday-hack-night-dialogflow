@@ -30,7 +30,7 @@
 .pub-cache/
 .pub/
 /build/
-assets/json/dialogflow-45-7c4bc70b3159.json
+assets/json/dialogflow-45.json
 
 # Web related
 lib/generated_plugin_registrant.dart

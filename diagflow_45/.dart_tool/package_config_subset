@@ -6,10 +6,6 @@ boolean_selector
 2.12
 file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/
 file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-2.1.0/lib/
-bubble
-2.12
-file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/bubble-1.2.1/
-file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/bubble-1.2.1/lib/
 characters
 2.12
 file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0/
@@ -54,10 +50,6 @@ http_parser
 2.3
 file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4/
 file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4/lib/
-intl
-2.12
-file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/
-file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0/lib/
 matcher
 2.12
 file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10/
@@ -118,8 +110,8 @@ flutter_test
 2.12
 file:///C:/Padikkan_Flutter/flutter/packages/flutter_test/
 file:///C:/Padikkan_Flutter/flutter/packages/flutter_test/lib/
-diagflow_45
-2.7
+landingpage
+2.1
 file:///F:/Diagflow/saturday-hack-night-dialogflow/diagflow_45/
 file:///F:/Diagflow/saturday-hack-night-dialogflow/diagflow_45/lib/
 2

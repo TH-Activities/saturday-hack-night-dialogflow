@@ -14,12 +14,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "bubble",
-      "rootUri": "file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/bubble-1.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "characters",
       "rootUri": "file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0",
       "packageUri": "lib/",
@@ -96,12 +90,6 @@
       "rootUri": "file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.3"
-    },
-    {
-      "name": "intl",
-      "rootUri": "file:///C:/Padikkan_Flutter/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "matcher",
@@ -182,13 +170,13 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "diagflow_45",
+      "name": "landingpage",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.1"
     }
   ],
-  "generated": "2021-07-24T17:06:07.681881Z",
+  "generated": "2021-07-24T17:29:26.435066Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
