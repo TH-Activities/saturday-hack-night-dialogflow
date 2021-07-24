@@ -97,12 +97,26 @@ export function apiReq(mood, text) {
 
   console.log(url);
 
-  let img_link;
+  // add img to page
+  let img = document.createElement("img");
   fetch(url)
     .then((response) => response.json())
-    .then((data) => (img_link = data.data.url));
+    .then((data) => (img.src = data.data.url));
 
-  return img_link;
+  img.setAttribute("style", "max-width: 16rem");
+  document.querySelector(".main").appendChild(img);
+
+  document.querySelector("form").setAttribute("style", "display:none");
+
+  let reset = document.createElement("button");
+  reset.id = "reset-btn";
+  reset.className = "reset";
+  reset.innerHTML = "Get Another";
+
+  reset.onclick = () => {
+    location.reload();
+  };
+  document.querySelector(".main").appendChild(reset);
 
   // try {
   //   let json = await response.json();

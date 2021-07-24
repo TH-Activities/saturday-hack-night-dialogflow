@@ -22,7 +22,5 @@ user_form.onsubmit = async (e) => {
     .then((data) => {
       mood = data;
     })
-    .then(() => (img_link = apiReq(mood, user_input.value)))
-    .then(console.log(img_link));
-  // Meme response
+    .then(() => (img_link = apiReq(mood, user_input.value)));
 };

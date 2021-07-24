@@ -9,8 +9,7 @@
 }
 
 body {
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #eeedeb;
 }
 
@@ -100,6 +99,34 @@ form {
 }
 
 #search-btn:active {
+  background-color: #141414;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 4px;
+          box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 4px;
+}
+
+#reset-btn {
+  font-size: 1.5rem;
+  margin: 8px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.1) 4px 4px 16px;
+          box-shadow: rgba(50, 49, 47, 0.1) 4px 4px 16px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+#reset-btn:hover {
+  background-color: #1b1b1b;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.4) 4px 4px 8px;
+          box-shadow: rgba(50, 49, 47, 0.4) 4px 4px 8px;
+}
+
+#reset-btn:active {
   background-color: #141414;
   -webkit-box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 4px;
           box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 4px;

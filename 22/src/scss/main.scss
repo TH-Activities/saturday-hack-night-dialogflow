@@ -9,8 +9,7 @@
 }
 
 body {
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #eeedeb;
 }
 
@@ -58,6 +57,28 @@ form {
 }
 
 #search-btn {
+  font-size: 1.5rem;
+  margin: 8px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  box-shadow: hsla(45, 4%, 19%, 0.1) 4px 4px 16px;
+  transition: all 0.1s;
+  &:hover {
+    background-color: #1b1b1b;
+    box-shadow: hsla(45, 4%, 19%, 0.4) 4px 4px 8px;
+  }
+  &:active {
+    background-color: #141414;
+    box-shadow: hsla(45, 4%, 19%, 0.4) 2px 2px 4px;
+  }
+}
+
+#reset-btn {
   font-size: 1.5rem;
   margin: 8px;
   font-weight: 600;
