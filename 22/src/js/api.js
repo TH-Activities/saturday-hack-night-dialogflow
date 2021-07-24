@@ -90,7 +90,7 @@ export function apiReq(mood, text) {
       params = param0;
   }
 
-  let url = `https://api.imgflip.com/caption_image?=${Object.keys(params)
+  let url = `https://api.imgflip.com/caption_image?${Object.keys(params)
     .map((key) => key + "=" + params[key])
     .join("&")}`;
 
