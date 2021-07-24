@@ -154,7 +154,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@rijfas](https://twitter.com/your_username) - rijfas01@gmail.com
+Rijfas - [@rijfas](https://github.com/rijfas) - rijfas01@gmail.com
 
 Project Link: [https://github.com/rijfas/saturday-hack-night-dialogflow](https://github.com/rijfas/saturday-hack-night-dialogflow)
 
