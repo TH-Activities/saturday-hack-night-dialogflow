@@ -29,7 +29,7 @@ function chatbotResponse() {
   fetch('http://api.icndb.com/jokes/random').then(res=>res.json()).then(data =>
     {
         botMessage=data.value.joke ; messages.push("<b>" + botName + ":</b> " + botMessage);Speech(botMessage);
-
+        
     })
   ;
 }
