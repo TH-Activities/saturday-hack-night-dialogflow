@@ -19,7 +19,7 @@ This bot is still under development and also have many bugs.
 
 - Add this bot to your server via the link given below
 - NB : If you want to interact with the bot add a '$' symbol before the command
-- <img title="Example Screenshot" alt="Alt text" src="/images/boo.svg">
+- <img title="Example Screenshot" alt="Alt text" src="/images/ss.png">
 
 
 [Click here to add this bot to your server](https://discord.com/oauth2/authorize?client_id=868480795667476480&scope=bot)
