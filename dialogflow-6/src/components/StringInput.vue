@@ -56,6 +56,7 @@ export default {
       },
       showOutput: false,
       showTextLoading: false,
+      memeSrc: null,
     };
   },
   components: {
@@ -92,16 +93,39 @@ export default {
         response.queryTextSentiment.score < 0.5
       ) {
         this.sentiment.finalEmotion = "both happy and sad?";
+        let memes = ["tenor.gif"];
+        this.memeSrc =
+          "../../memes/" + memes[Math.floor(Math.random() * memes.length)];
       } else if (response.queryTextSentiment.score > 0.5) {
         this.sentiment.finalEmotion = "definitely feeling joyful!";
+        let memes = ["happy-meme.webp", "happy-memes.webp"];
+        this.memeSrc =
+          "/memes/" + memes[Math.floor(Math.random() * memes.length)];
       } else if (
         response.queryTextSentiment.score < 0 &&
         response.queryTextSentiment.score > -0.5
       ) {
         this.sentiment.finalEmotion = "feeling both happy and sad! Cheer up!";
+        let memes = [
+          "happy.png",
+          "yellow-octopus-happy-meme-4.jpg",
+          "way-too-happy.jpg",
+        ];
+        this.memeSrc =
+          "/memes/" + memes[Math.floor(Math.random() * memes.length)];
       } else if (response.queryTextSentiment.score < -0.5) {
         this.sentiment.finalEmotion =
           "feeling down, but nothing that a meme can't improve!";
+        let memes = [
+          "angry-girl.jpg",
+          "pain.png",
+          "sad_waiting.png",
+          "45-Sad-Memes-When-Youre-Feeling-Sad-Like-Drowning-1.jpg",
+          "45-Sad-Memes-When-Youre-Feeling-Sad-Like-Drowning-2.jpg",
+          "45-Sad-Memes-When-Youre-Feeling-Sad-Like-Drowning-7.jpg",
+        ];
+        this.memeSrc =
+          "/memes/" + memes[Math.floor(Math.random() * memes.length)];
       }
     },
   },
@@ -148,5 +172,10 @@ textarea {
   border-radius: 3px;
   padding: 20px 20px;
   width: 100%;
+}
+
+.meme {
+  width: 100%;
+  border-radius: 3px;
 }
 </style>

@@ -15,6 +15,11 @@
       </button>
       <StringInput :showInput="showInputForm" />
     </transition>
+    <footer>
+      <p>
+        <a href="https://khaleelgibran.com">Khaleel Gibran</a> ~ <a href="http://tinkerhub.org/saturday-hack-night/">Saturday Hack Night</a> // <a href="https://github.com/TH-Activities/saturday-hack-night-dialogflow">Dialogflow API</a> 
+      </p>
+    </footer>
   </div>
 </template>
 
@@ -100,6 +105,17 @@ button:hover {
   text-align: center;
   font-size: 1.5em;
   margin-top: 0px;
+}
+
+footer {
+  margin-top: 50px;
+  border-top: 1px solid rgb(119, 0, 255);
+  color: rgb(119, 0, 255);
+  width: 100%;
+}
+
+a {
+  color: inherit;
 }
 
 /* vue animations */
