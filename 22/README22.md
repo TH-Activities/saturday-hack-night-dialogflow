@@ -2,4 +2,6 @@
 
 ## Mood Meme Generator
 
-Placeholder README to init folder.
+Generates meme based on user's input mood (using DialogFlow api to find mood)
+
+Live demo: https://moodmemeth.web.app/
