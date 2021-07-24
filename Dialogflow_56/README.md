@@ -18,5 +18,5 @@ This bot is still under development and also have many bugs.
 [Click here to join the server](https://discord.com/oauth2/authorize?client_id=868480795667476480&scope=bot)
 
 ## Participants
-- Aflah V K
-- Adil Ayyob
+- [Aflah V K](https://github.com/AFLAH2527)
+- [Adil Ayyob](https://github.com/Adilayyoob)
