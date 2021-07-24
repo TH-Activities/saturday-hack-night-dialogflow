@@ -4,7 +4,7 @@ async function getResponse(query) {
 
     let result = ""
     const projectId = process.env.projectId;
-    console.log(projectId)
+    // console.log(projectId)
     const sessionId = '123456';
     const queries = [query]
 
@@ -52,7 +52,7 @@ async function getResponse(query) {
         let intentResponse;
         for (const query of queries) {
             try {
-                console.log(`Sending Query: ${query}`);
+                // console.log(`Sending Query: ${query}`);
                 intentResponse = await detectIntent(
                     projectId,
                     sessionId,
@@ -61,7 +61,7 @@ async function getResponse(query) {
                     languageCode
                 );
 
-                console.log('Detected intent', intentResponse.queryResult.fulfillmentText);
+                // console.log('Detected intent', intentResponse.queryResult.fulfillmentText);
                 result = intentResponse.queryResult.fulfillmentText;
                 // Use the context from this response for next queries
                 // context = intentResponse.queryResult.outputContexts;

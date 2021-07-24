@@ -22,9 +22,12 @@ app.post("/", async function(req, res) {
     console.log(reply);
     res.redirect("/");
 })
+let port = process.env.PORT || 5000;
 
 
 
-app.listen(5000, function() {
-    console.log("server running")
+
+
+app.listen(port, function() {
+    console.log("server running on port " + port)
 })
