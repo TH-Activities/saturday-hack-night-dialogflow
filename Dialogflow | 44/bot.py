@@ -7,6 +7,11 @@ import html
 import sys
 import os
 import json
+import nltk
+from nltk.corpus import wordnet
+import operator
+from collections import OrderedDict
+
 from praw.reddit import Subreddit
 from time import sleep
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters 
@@ -51,37 +56,57 @@ if not last_sub_id:
 else:
     log.info("Last posted submission is {}".format(last_sub_id))
 start_time = datetime.utcnow().timestamp()
-def fetch_reddit(words):
+def fetch_reddit(words):    
+    seo={}
+    global post,last_sub_id      
+    try:
+        for submission in subreddit.hot():
+            try:
 
-    while True:
-        try:
-            for submission in subreddit.hot():
-                try:
-                    global post
-                    link = "https://redd.it/{id}".format(id=submission.id)
-                    if not post and submission.created_utc < start_time:
-                        log.info("Skipping {} --- latest submission not found!".format(submission.id))
-                        if submission.id == last_sub_id:
-                            post = True
-                        continue
-                    image = html.escape(submission.url or '')
-                    title = html.escape(submission.title or '')
-                    user = html.escape(submission.author.name or '')
+                title = html.escape(submission.title or '')
+                link = "https://redd.it/{id}".format(id=submission.id)
 
-                    template = "{title}\n{link}\nby {user}"
-                    message = template.format(title=title, link=link, user=user)
+                for word in words:
+                    if title.find(word) != -1:
+                        if submission.id in seo:
+                            seo[submission.id]=seo[submission.id]+1
+                        else:
+                            seo[submission.id]=1
+
+            except Exception as e:
+                log.exception("Error parsing {}".format(link))
+    except Exception as e:
+        log.exception("Error fetching new submissions, restarting in 10 secs")
+        sleep(10)
+    if len(seo) <=0:
+        bot.send_message(chat_id=816449476,text="No new memes related to your mood in hot feed :(, sadness intensifies...")
+        return
+    keyMax = max(seo.items(), key = operator.itemgetter(1))[0]
+    if keyMax==last_sub_id:
+        seo[keyMax]=-1
+        max(seo.iteritems(), key=operator.itemgetter(1))[0]
+        keyMax = max(seo.items(), key = operator.itemgetter(1))[0]
+    else:
+        for submission in subreddit.hot():
+            if keyMax==submission.id:
+                link = "https://redd.it/{id}".format(id=submission.id)
+                image = html.escape(submission.url or '')
+                title = html.escape(submission.title or '')
+                user = html.escape(submission.author.name or '')
+
+                template = "{title}\n{link}\nby {user}"
+                message = template.format(title=title, link=link, user=user)
 
 
-                    bot.sendPhoto(chat_id=816449476, photo=submission.url, caption=message)
-                    # bot.sendMessage(chat_id=channel, parse_mode=telegram.ParseMode.HTML, text=message)
-                    write_submissions(submission.id)
-                    sleep(100)
-                except Exception as e:
-                    log.exception("Error parsing {}".format(link))
-        except Exception as e:
-            log.exception("Error fetching new submissions, restarting in 10 secs")
-            sleep(10)
-                
+                bot.sendPhoto(chat_id=816449476, photo=submission.url, caption=message)
+                # bot.sendMessage(chat_id=channel, parse_mode=telegram.ParseMode.HTML, text=message)
+                write_submissions(submission.id)
+                return
+        else:
+            bot.send_message(chat_id=816449476,text="No new memes related to your mood in hot feed :(, sadness intensifies...")
+            return
+
+                        
 
 def detect_intent_with_sentiment_analysis(project_id, session_id, texts, language_code):
     """Returns the result of detect intent with texts as inputs and analyzes the
@@ -121,6 +146,7 @@ def detect_intent_with_sentiment_analysis(project_id, session_id, texts, languag
     score= response.query_result.sentiment_analysis_result.query_text_sentiment.score
     texts=texts.split(' ')
     mx=-1
+    word=[]
     for text in texts:
         text_input = dialogflow.TextInput(text=text, language_code=language_code)
 
@@ -141,21 +167,15 @@ def detect_intent_with_sentiment_analysis(project_id, session_id, texts, languag
         }
         )
         s=response.query_result.sentiment_analysis_result.query_text_sentiment.score
-        word=[]
-        if s > mx:
-            mx=s
+        if s > 0.1 or s < -0.1:
             word.append(response.query_result.query_text)
-    return (score,word)  
-
-
-
- 
-
-
-
-
-
-
+    words=[]
+    for w in word:
+        for synset in wordnet.synsets(w):
+            for lemma in synset.lemmas():
+                if len(lemma.name()) > 3:
+                    words.append(lemma.name())    #add the synonyms
+    return (score,words)  
 
 # Define a few command handlers. These usually take the two arguments update and
 # context. Error handlers also receive the raised TelegramError object in error.
@@ -175,6 +195,7 @@ def reply(update, context):
     res= detect_intent_with_sentiment_analysis(PROJECT_ID,update.update_id,update.message.text, "en")
     
     update.message.reply_text(str(res[0]))
+    print(res[1])
     fetch_reddit(res[1])
 
 def error(update, context):
