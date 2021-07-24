@@ -1,4 +1,5 @@
 export function apiReq(mood, text) {
+  text = encodeURI(text);
   const param1 = {
     template_id: 101287,
     //happy kid
@@ -95,9 +96,13 @@ export function apiReq(mood, text) {
     .join("&")}`;
 
   console.log(url);
+
+  let img_link;
   fetch(url)
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => (img_link = data.data.url));
+
+  return img_link;
 
   // try {
   //   let json = await response.json();
