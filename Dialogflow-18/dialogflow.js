@@ -60,8 +60,8 @@ async function getResponse(query) {
                     context,
                     languageCode
                 );
-                console.log('Detected intent');
-                console.log(intentResponse.queryResult.fulfillmentText);
+
+                console.log('Detected intent', intentResponse.queryResult.fulfillmentText);
                 result = intentResponse.queryResult.fulfillmentText;
                 // Use the context from this response for next queries
                 // context = intentResponse.queryResult.outputContexts;
