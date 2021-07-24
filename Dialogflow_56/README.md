@@ -15,6 +15,13 @@ This a short project done in association with Saturday Hack Night conducted by T
 Jon Snow is a discord bot which allows the users to order their favorite food items to the list. 
 This bot is still under development and also have many bugs. 
 
+## How it works!!
+
+- Add this bot to your server via the link given below
+- NB : If you want to interact with the bot add a '$' symbol before the command
+- 
+
+
 
 [Click here to add this bot to your server](https://discord.com/oauth2/authorize?client_id=868480795667476480&scope=bot)
 
