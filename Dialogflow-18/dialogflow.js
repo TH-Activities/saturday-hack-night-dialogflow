@@ -72,7 +72,10 @@ async function getResponse(query) {
     }
 
     await executeQueries(projectId, sessionId, queries, languageCode);
-    console.log("Response: ", result)
+    // console.log("Response: ", result)
+    return result;
 }
 
-getResponse("what is your age dear brother")
+module.exports = getResponse;
+
+// getResponse("what is your age dear brother")
