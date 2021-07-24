@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #eeedeb;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 10rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h3 {
+  margin: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+#search {
+  padding: 16px 12px;
+  border-radius: 16px;
+  border: none;
+  width: 60%;
+  outline: none;
+  box-shadow: hsla(45, 4%, 19%, 0.1) 4px 4px 16px;
+  &:focus {
+    box-shadow: hsla(45, 4%, 19%, 0.4) 2px 2px 16px;
+    transition: all 0.25s;
+  }
+}
+
+#search-btn {
+  font-size: 1.5rem;
+  margin: 8px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  box-shadow: hsla(45, 4%, 19%, 0.1) 4px 4px 16px;
+  transition: all 0.1s;
+  &:hover {
+    background-color: #1b1b1b;
+    box-shadow: hsla(45, 4%, 19%, 0.4) 4px 4px 8px;
+  }
+  &:active {
+    background-color: #141414;
+    box-shadow: hsla(45, 4%, 19%, 0.4) 2px 2px 4px;
+  }
+}

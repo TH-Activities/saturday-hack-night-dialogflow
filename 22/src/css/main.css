@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #eeedeb;
+}
+
+.main {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  max-width: 10rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h3 {
+  margin: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+#search {
+  padding: 16px 12px;
+  border-radius: 16px;
+  border: none;
+  width: 60%;
+  outline: none;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.1) 4px 4px 16px;
+          box-shadow: rgba(50, 49, 47, 0.1) 4px 4px 16px;
+}
+
+#search:focus {
+  -webkit-box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 16px;
+          box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 16px;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+#search-btn {
+  font-size: 1.5rem;
+  margin: 8px;
+  font-weight: 600;
+  padding: 12px;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.1) 4px 4px 16px;
+          box-shadow: rgba(50, 49, 47, 0.1) 4px 4px 16px;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+#search-btn:hover {
+  background-color: #1b1b1b;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.4) 4px 4px 8px;
+          box-shadow: rgba(50, 49, 47, 0.4) 4px 4px 8px;
+}
+
+#search-btn:active {
+  background-color: #141414;
+  -webkit-box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 4px;
+          box-shadow: rgba(50, 49, 47, 0.4) 2px 2px 4px;
+}
+/*# sourceMappingURL=main.css.map */
