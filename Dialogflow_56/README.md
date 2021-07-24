@@ -1,4 +1,5 @@
-## This is the repo of team Dialogflow/56
+## Jon Snow Bot (Dialogflow/56)
+This a short project done in association with Saturday Hack Night conducted by TinkerHub Foundation
 
 ## Techs Used
 
