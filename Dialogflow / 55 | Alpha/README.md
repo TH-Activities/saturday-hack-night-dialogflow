@@ -141,8 +141,17 @@ You can just run the cli tool or use a cloud system to deploy the bot.
    - @Alpha Bot tell me a joke
    - @Alpha Bot how are you
    
----
-   
+### Creating custom discord bot
+1. Add package alpha to your bot server
+2. Get Alpha singleton  
+  ```py
+   alpha = Alpha.instance()
+   ```
+3. Use execute(message) to handle user messages
+  ```py
+   response = alpha.execute('hi')
+   print(response)
+   ```   
 
 
 <!-- ROADMAP -->
