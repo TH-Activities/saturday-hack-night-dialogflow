@@ -21,6 +21,7 @@ This bot is still under development and also have many bugs.
 - NB : If you want to interact with the bot add a '$' symbol before the command
 
 ##  Example Commands: 
+- $ (just tell it you are hungry or just ask who is this. It will respond)
 - $ (hi,hello etc)
 - $ (food time like breakfast,lunch, dinner etc)
 - $ (just ask send me menu)
