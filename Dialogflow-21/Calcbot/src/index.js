@@ -36,7 +36,7 @@ client.on('message', async message => {
         console.log(request);
         const responses = await sessionClient.detectIntent(request);
         const result = responses[0].queryResult.fulfillmentText;
-        message.reply('$result');
+        message.reply(result);
     }
 })
 
