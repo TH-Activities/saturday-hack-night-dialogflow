@@ -192,10 +192,10 @@ Project Link: [https://github.com/rijfas/saturday-hack-night-dialogflow](https:/
 
 <!-- CONTRIBUTERS -->
 ## Contributers
-* [Amjad CP](https://github.com/amjadcp)
-* [Rijfas](https://github.com/rijfas)
-* [Nidha Shoukath](https://github.com/nidhashoukhath)
-* [Rasil](https://github.com/rasilkp/rasilkp)
+* [Amjad CP](https://github.com/amjadcp) [Bot deployment and handling]
+* [Rijfas](https://github.com/rijfas) [Core design and CLI]
+* [Nidha Shoukath](https://github.com/nidhashoukhath) [DialogFlow API Handling]
+* [Rasil](https://github.com/rasilkp/rasilkp) [Bot Avatar Design]
 
 
 
