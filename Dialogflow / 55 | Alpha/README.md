@@ -120,8 +120,28 @@ This is an example of how to list things you need to use the software and how to
 
 You can just run the cli tool or use a cloud system to deploy the bot.
 
+### Using the CLI
 
+1. Change to cli directory
+   ```sh
+   cd cli
+   ```
+3. Run alpha.py
+   ```sh
+   python alpha.py
+   ```
 
+---
+
+### Using the bot
+1. <a href="https://discord.com/oauth2/authorize?client_id=868410422536052786&scope=bot">Add</a> bot to your server 
+2. Mention @Alpha Bot and give a message
+3. Example messages (Can handle small talks too!)
+   - @ALpha Bot hi
+   - @Alpha Bot one + one
+   - @Alpha Bot tell me a joke
+   - @Alpha Bot how are you
+   
 
 
 <!-- ROADMAP -->
