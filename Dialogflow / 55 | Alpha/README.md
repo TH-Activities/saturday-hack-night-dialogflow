@@ -4,7 +4,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/rijfas/saturday-hack-night-dialogflow">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo">
   </a>
 
   <h3 align="center">Alpha Bot</h3>
