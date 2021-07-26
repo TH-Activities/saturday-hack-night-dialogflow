@@ -1,0 +1,1022 @@
+/******************************************************************
+
+
+	------------------------
+	-- TABLE OF CONTENTS --
+	------------------------
+	
+	--  1. Basic
+	--  2. Preloader
+    --  3. Hero
+    --  4. Hero --> Front Content
+    --  5. Hero --> Background Content
+    --  6. Popup Subscribe
+ 
+ 
+ ******************************************************************/
+
+
+
+
+/** 1. Basic
+*******************************************************************/
+
+html
+{
+    font-size: 10px !important;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+
+    overflow: hidden;
+
+    color: #fff;
+    background: #000;
+
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+
+    color: #fff;
+}
+
+h1
+{
+    font-size: 6rem;
+}
+
+h2
+{
+    font-size: 5rem;
+}
+
+h3
+{
+    font-size: 4rem;
+}
+
+h4
+{
+    font-size: 3rem;
+}
+
+h5
+{
+    font-size: 2rem;
+}
+
+h6
+{
+    font-size: 1.8rem;
+}
+
+p
+{
+    font-size: 1.4rem;
+}
+
+a,
+a:hover,
+a:focus
+{
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+         -o-transition: all 300ms ease;
+            transition: all 300ms ease;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #fff;
+}
+
+@media (max-width:700px)
+{
+    html
+    {
+        font-size: 8px !important;
+    }
+}
+
+@media (max-width:500px)
+{
+    html
+    {
+        font-size: 6px !important;
+    }
+}
+
+@media (max-width:350px)
+{
+    html
+    {
+        font-size: 5px !important;
+    }
+}
+
+@media (orientation:landscape) and (max-height:420px)
+{
+    html
+    {
+        font-size: 8px !important;
+    }
+}
+
+
+
+/** 2. Preloader
+*******************************************************************/
+
+.preloader
+{
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #2707eb;
+}
+
+.preloader.preloader-hidden
+{
+    height: 0;
+    
+    -webkit-transition: .5s ease .3s;
+         -o-transition: .5s ease .3s;
+            transition: .5s ease .3s;
+}
+
+.preloader .spinner
+{
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+    opacity: 1;
+}
+
+.preloader.preloader-hidden .spinner
+{
+    opacity: 0;
+    
+    -webkit-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+}
+
+.preloader .spinner > div
+{
+    display: inline-block;
+
+    width: 18px;
+    height: 18px;
+    margin: 0 6px;
+
+    -webkit-animation: spinner-bounce 1.4s infinite ease-in-out both;
+            animation: spinner-bounce 1.4s infinite ease-in-out both;
+
+    border-radius: 100%;
+    background-color: #fff;
+}
+
+.preloader .spinner .bounce-1
+{
+    -webkit-animation-delay: -.32s;
+            animation-delay: -.32s;
+}
+
+.preloader .spinner .bounce-2
+{
+    -webkit-animation-delay: -.16s;
+            animation-delay: -.16s;
+}
+
+@-webkit-keyframes spinner-bounce
+{
+    0%,
+    80%,
+    100%
+    {
+        -webkit-transform: scale(0);
+    }
+    40%
+    {
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@keyframes spinner-bounce
+{
+    0%,
+    80%,
+    100%
+    {
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+
+    40%
+    {
+        -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+    }
+}
+
+
+
+/** 3. Hero
+*******************************************************************/
+
+.hero
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .animation-container
+{
+    -webkit-transition: .5s ease;
+         -o-transition: .5s ease;
+            transition: .5s ease;
+}
+
+.hero .animation-container.animation-fade
+{
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade.run-animation
+{
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-up
+{
+    -webkit-transform: translateY(10vh);
+        -ms-transform: translateY(10vh);
+            transform: translateY(10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-up.run-animation
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-down
+{
+    -webkit-transform: translateY(-10vh);
+        -ms-transform: translateY(-10vh);
+            transform: translateY(-10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-down.run-animation
+{
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-left
+{
+    -webkit-transform: translateX(10vh);
+        -ms-transform: translateX(10vh);
+            transform: translateX(10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-left.run-animation
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+.hero .animation-container.animation-fade-right
+{
+    -webkit-transform: translateX(-10vh);
+        -ms-transform: translateX(-10vh);
+            transform: translateX(-10vh);
+
+    opacity: 0;
+}
+
+.hero .animation-container.animation-fade-right.run-animation
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+
+
+/** 4. Hero --> Front Content 
+*******************************************************************/
+
+.hero .front-content
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .front-content .container-mid
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    text-align: center;
+}
+
+.hero .front-content .container-mid img.logo
+{
+    display: block;
+
+    margin: 0 auto;
+}
+
+.hero .front-content .container-mid h1
+{
+    font-weight: bold;
+    line-height: 1.1em;
+
+    margin-top: .5em;
+    margin-bottom: .46em;
+
+    letter-spacing: .025em;
+}
+
+.hero .front-content .container-mid p.subline
+{
+    font-size: 3rem;
+    line-height: 1.4em;
+
+    max-width: 18em;
+    margin-right: auto;
+    margin-bottom: 1.3em;
+    margin-left: auto;
+
+    letter-spacing: .025em;
+}
+
+.hero .front-content .container-mid .open-popup
+{
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 2.6em;
+
+    position: relative;
+
+    display: inline-block;
+    overflow: hidden;
+
+    padding: 0 2.6em;
+
+    cursor: pointer;
+    -webkit-transition: all .1s linear;
+         -o-transition: all .1s linear;
+            transition: all .1s linear;
+    letter-spacing: .025em;
+
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 4em;
+    background: none;
+}
+
+.hero .front-content .container-mid .open-popup:hover
+{
+    color: #111;
+    background: #fff;
+}
+
+.hero .front-content .footer
+{
+    position: absolute;
+    bottom: 10px;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.hero .front-content .footer p
+{
+    font-size: 1.3rem;
+
+    letter-spacing: .025em;
+
+    opacity: .85;
+}
+
+.hero .front-content .footer p a
+{
+    font-weight: bold;
+}
+
+@media (orientation:landscape) and (max-height:420px)
+{
+    .hero .front-content .footer
+    {
+        display: none;
+    }
+}
+
+
+
+/** 5. Hero --> Background Content 
+*******************************************************************/
+
+.hero .background-content
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero .background-content.parallax-on
+{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+
+    width: 110%;
+    height: 110%;
+
+    -webkit-transform: translate3d(-50%, -50%, 0px) !important;
+            transform: translate3d(-50%, -50%, 0px) !important;
+}
+
+.hero .background-content .background-overlay
+{
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: .7;
+    background: #020026;
+}
+
+.hero .background-content .background-img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/** 6. Popup Subscribe
+*******************************************************************/
+
+.popup
+{
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    left: 0;
+
+    overflow-y: auto;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+    pointer-events: none;
+
+    opacity: 0;
+    background: rgba(5,5,5,.5);
+}
+
+.popup.show
+{
+    z-index: 100;
+
+    pointer-events: all;
+
+    opacity: 1;
+}
+
+.popup .backface
+{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.popup .card
+{
+    position: relative;
+    z-index: 5;
+    top: 60%;
+    left: 50%;
+
+    max-width: 410px;
+    padding: 90px 46px;
+
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    text-align: center;
+
+    opacity: 0;
+    border: 5px solid #fff;
+    background: red;
+    background-image: url(../img/card-background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.popup.show .card
+{
+    top: 50%;
+
+    -webkit-transition: .4s ease;
+         -o-transition: .4s ease;
+            transition: .4s ease;
+
+    opacity: 1;
+}
+
+.popup .card:after
+{
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    opacity: .4;
+    background: #111;
+}
+
+.popup .card .close-button
+{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+}
+
+.popup .card .close-button:before
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+
+    background: #fff;
+}
+
+.popup .card .close-button:after
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+
+    background: #fff;
+}
+
+.popup .card i
+{
+    font-size: 6rem;
+}
+
+.popup .card h3
+{
+    margin-top: .5em;
+    margin-bottom: .8em;
+}
+
+.popup .card p.subline
+{
+    font-size: 1.6rem;
+
+    max-width: 19em;
+    margin-right: auto;
+    margin-bottom: 2.4em;
+    margin-left: auto;
+
+    letter-spacing: .025em;
+}
+
+
+.popup .card .subscribe-form
+{
+    position: relative;
+
+    width: 100%;
+}
+
+.popup .card .subscribe-form .fhp-input
+{
+    display: none;
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+.popup .card .subscribe-form input
+{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3.2em;
+
+    display: block;
+
+    height: 3.2em;
+    margin-bottom: 20px;
+
+    text-align: center;
+    letter-spacing: .03em;
+
+    border: none;
+    border-radius: 6px;
+    outline: none !important;
+    background: #fff;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+.popup .card .subscribe-form button
+{
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 3.2em !important;
+
+    position: relative;
+
+    display: block;
+
+    height: 3.2em;
+    padding: 0;
+
+    -webkit-transition: .1s ease;
+         -o-transition: .1s ease;
+            transition: .1s ease;
+    text-align: center;
+    letter-spacing: .03em;
+
+    border: none;
+    border-radius: 6px;
+    outline: none !important;
+    background: #2707eb;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+}
+
+.popup .card .subscribe-form button[disabled]
+{
+    cursor: not-allowed;
+
+    opacity: 1;
+
+    filter: alpha(opacity=100);
+}
+
+.popup .card .subscribe-form button span
+{
+    font-size: inherit;
+    line-height: inherit;
+
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #fff !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.popup .card .subscribe-form button i
+{
+    font-size: 1.4em;
+    line-height: inherit;
+
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 5%;
+
+    width: auto;
+
+    -webkit-transform: translateX(-15px);
+        -ms-transform: translateX(-15px);
+            transform: translateX(-15px);
+    text-align: center;
+
+    opacity: 0;
+    color: #fff !important;
+}
+
+.popup .card .subscribe-form button:hover i
+{
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+
+    opacity: 1;
+}
+
+.popup .card .subscribe-form button[disabled] i
+{
+    display: none !important;
+}
+
+.popup .card .subscribe-form .error-message,
+.popup .card .subscribe-form .success-message
+{
+    font-weight: 500;
+
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+    letter-spacing: .02em;
+
+    opacity: 0;
+}
+
+.popup .card .subscribe-form.form-error .error-message,
+.popup .card .subscribe-form.form-success .success-message
+{
+    -webkit-transition: .3s ease;
+         -o-transition: .3s ease;
+            transition: .3s ease;
+
+    opacity: 1;
+}
+
+.popup .card .subscribe-form.form-success .success-message
+{
+    -webkit-animation-name: form_success_animation;
+            animation-name: form_success_animation;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+
+    color: lawngreen;
+}
+
+.popup .card .subscribe-form.form-error .error-message
+{
+    -webkit-animation-name: form_error_animation;
+            animation-name: form_error_animation;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+
+    color: red;
+}
+
+@-webkit-keyframes form_success_animation
+{
+    from
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+
+    50%
+    {
+        -webkit-transform: scale3d(1.08, 1.08, 1.08);
+                transform: scale3d(1.08, 1.08, 1.08);
+    }
+
+    to
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes form_success_animation
+{
+    from
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+
+    50%
+    {
+        -webkit-transform: scale3d(1.08, 1.08, 1.08);
+                transform: scale3d(1.08, 1.08, 1.08);
+    }
+
+    to
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+                transform: scale3d(1, 1, 1);
+    }
+}
+
+@-webkit-keyframes form_error_animation
+{
+    from
+    {
+        -webkit-transform: none;
+                transform: none;
+    }
+
+    15%
+    {
+        -webkit-transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+                transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30%
+    {
+        -webkit-transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 3deg);
+                transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45%
+    {
+        -webkit-transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -3deg);
+                transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60%
+    {
+        -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 2deg);
+                transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75%
+    {
+        -webkit-transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+                transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to
+    {
+        -webkit-transform: none;
+                transform: none;
+    }
+}
+
+@keyframes form_error_animation
+{
+    from
+    {
+        -webkit-transform: none;
+                transform: none;
+    }
+
+    15%
+    {
+        -webkit-transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+                transform: translate3d(-10%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+
+    30%
+    {
+        -webkit-transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 3deg);
+                transform: translate3d(8%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+
+    45%
+    {
+        -webkit-transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -3deg);
+                transform: translate3d(-6%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+
+    60%
+    {
+        -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 2deg);
+                transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+
+    75%
+    {
+        -webkit-transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+                transform: translate3d(-2%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+
+    to
+    {
+        -webkit-transform: none;
+                transform: none;
+    }
+}
+
+@media (orientation:landscape) and (max-height:420px)
+{
+    .popup .card
+    {
+        -webkit-transform: translate(-50%,0%);
+            -ms-transform: translate(-50%,0%);
+                transform: translate(-50%,0%);
+    }
+
+    .popup.show .card
+    {
+        top: 0;
+    }
+}
