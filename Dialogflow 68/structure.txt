@@ -1,0 +1,3 @@
+Project Name: Story Pulse
+
+Overall Idea: Click or type the commands to show diffrent content (Storyboard) 
